@@ -463,6 +463,12 @@ def page_sign_terms() -> None:
             else:
                 st.info(f"Current status: {status or 'unknown'}. Sign in the window below, then check again.")
 
+        st.link_button(
+            "📱 Signing on mobile? Open the signing page in a new tab",
+            st.session_state["sign_url"],
+            help="Recommended on phones — switching apps reloads the iframe.",
+        )
+
         st.markdown('<div style="border-radius:12px; overflow:hidden; border:1px solid #e2e8f0;">', unsafe_allow_html=True)
         st.components.v1.html(
             f'<iframe src="{html.escape(st.session_state["sign_url"])}" '
