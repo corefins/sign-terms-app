@@ -1,0 +1,21 @@
+# Secrets — local only, never commit
+secrets.json
+*.secret
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+
+# Working files
+*.bak
+split_output/
+Split_Invoices.zip
+Tally_Output.xlsx
+bulk.pdf
